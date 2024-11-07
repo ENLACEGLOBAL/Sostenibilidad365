@@ -52,7 +52,7 @@ class backend extends Model
     public function insertempleados($p1, $p2, $p3, $p4, $p5, $p6, $p7, $p8)
     {
         try {
-            $sql = $this->conn->prepare($this->insert_empleados);
+            $sql = $this->conn->prepare($this->insertar_empleados);
             $sql->bindParam(1, $p1, \PDO::PARAM_STR);
             $sql->bindParam(2, $p2, \PDO::PARAM_STR);
             $sql->bindParam(3, $p3, \PDO::PARAM_STR);

@@ -7,7 +7,6 @@ use App\Models\backend;
 use App\Models\user;
 use Illuminate\Support\Facades\Auth;
 
-
 class AdminController extends Controller
 {
     public function __construct()

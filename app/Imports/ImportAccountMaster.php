@@ -57,7 +57,7 @@ class ImportAccountMaster implements ToModel, WithHeadingRow, WithChunkReading, 
         $this->importSuccessful = true;
         $this->rowCount++;
 
-        $this->backend->insertempleados($row['NUMERO DE IDENTIFICACION DEL EMPLEADO'],$row['NOMBRE EMPLEADO'],$row['CARGO'],$row['PAIS'],$row['CIUDAD'],$row['FECHA TRANSACCION'],$row['CONCEPTO DE PAGO'],$row['VALOR DEL PAGO']);
+        $this->backend->insertempleados($row['numero_de_identificacion_del_empleado'],$row['nombre_empleado'],$row['cargo'],$row['pais'],$row['ciudad'],$row['fecha_transaccion'],$row['concepto_de_pago'],$row['valor_del_pago']);
         return null;
     }
 

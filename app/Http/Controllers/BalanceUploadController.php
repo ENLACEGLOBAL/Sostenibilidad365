@@ -26,7 +26,7 @@ class BalanceUploadController extends Controller
             $import = new ImportAccountMaster($this->backend);
             if (!$import->estructuraEsperada($file)) {
                 return response()->json(['error' => 'Las cabeceras o el archivo Excel no coinciden con la plantilla, verifica los nombres e intenta nuevamente.']);
-            } else if ($import->hasEmptyRequiredFields($file)) {
+            } else if (!$import->hasEmptyRequiredFields($file)) {
                 return response()->json(['error' => 'Hay al menos una fila con un dato obligatorio vacío.']);
             }
 
