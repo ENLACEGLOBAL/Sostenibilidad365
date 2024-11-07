@@ -52,9 +52,8 @@ class HomeController extends Controller
 
     public function uploadFile(Request $request)
     {
-        echo "<script>alert('dsfa');</script>";
         $request->validate([
-            'file' => 'required|file|mimes:xlsx,xls'
+            'file' => 'required|mimes:xlsx'
         ]);
         $file = $request->file('file');
         $response = $this->buc->buc_uploadFile($file);

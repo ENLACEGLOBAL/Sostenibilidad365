@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/',  [HomeController::class, 'ingresar'])->name('login');
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::post('/uploadFile', [App\Http\Controllers\HomeController::class, 'uploadFile'])->name('uploadFile');
